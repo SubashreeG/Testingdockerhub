@@ -5,8 +5,8 @@ pipeline {
         timestamps()
     }
     environment {
-        registry = "<dockerhub-username>/<repo-name>"
-        registryCredential = '<dockerhub-credential-name>'        
+        registry = "<suba99ee>/<jenkinsprofile>"
+        registryCredential = '<dokcred>'        
     }
     
     stages {
