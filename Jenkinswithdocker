@@ -15,10 +15,18 @@ pipeline {
                 git 'https://github.com/SubashreeG/jenkins.git'
             }
         }
-        stage('Building our image') {
+        stage('Setting Working Directory and Building Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("${registry}:${BUILD_NUMBER}")
+                    dir('/usr/bin/') {
+                        // You are now in the /usr/bin/ directory
+                        // Perform any actions you need in the /usr/bin/ directory
+                        // For example, you can run a command here
+                        sh 'your-command-here'
+                        
+                        // Build the Docker image in the /usr/bin/ directory
+                        dockerImage = docker.build("${registry}:${BUILD_NUMBER}")
+                    }
                 }
             }
         }
