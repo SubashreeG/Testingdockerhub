@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'pythonapp:01' // Replace with your desired Docker image
+            image 'python:3.8' // Replace with your desired Docker image
             registryUrl 'https://index.docker.io/v1/' // Add the Docker registry URL
             registryCredentialsId 'dokcred' // Add your Docker credentials ID
         }
