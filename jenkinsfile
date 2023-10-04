@@ -5,8 +5,8 @@ pipeline {
         timestamps()
     }
     environment {
-        registry = "<suba99ee>/<python_deploy>"
-        registryCredential = '<dokcred>'        
+        registry = "suba99ee/python_deploy"
+        registryCredential = 'dokcred'        
     }
     
     stages {
