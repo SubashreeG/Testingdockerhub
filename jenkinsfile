@@ -5,7 +5,7 @@ pipeline {
         timestamps()
     }
     environment {
-        registry = "<suba99ee>/<jenkinsprofile>"
+        registry = "<suba99ee>/<python_deploy>"
         registryCredential = '<dokcred>'        
     }
     
