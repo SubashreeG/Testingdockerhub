@@ -6,7 +6,6 @@ pipeline {
     }
     environment {
         registry = "suba99ee/python_deploy"
-        registryCredential = 'dokcred'        
     }
     
     stages {
@@ -21,7 +20,7 @@ pipeline {
         stage('Deploy Image') {
             steps {
                 script {
-                    docker.withRegistry('', registryCredential) {
+                    withDockerRegistry([credentialsId: 'dokcred', url: 'https://index.docker.io/v1/']) {
                         dockerImage.push()
                     }
                 }
